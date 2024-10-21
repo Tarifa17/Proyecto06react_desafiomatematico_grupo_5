@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Puntuacion = ({ puntos }) => {
+function Puntuacion ({ puntos }) {
     return (
       <div>
         <h2>¡Juego terminado!</h2>

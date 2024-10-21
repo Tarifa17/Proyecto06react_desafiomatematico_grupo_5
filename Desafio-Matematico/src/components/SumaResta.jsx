@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Puntuacion from './Puntuacion';
 
 function SumaResta() {
     const generarOperacion = () => {
@@ -41,7 +42,7 @@ function SumaResta() {
     };
 
     if (intento === 5){
-        return <Puntuacion puntos={puntos}/>
+        return <Puntuacion puntos={puntaje}/>
     }
 
     return (
