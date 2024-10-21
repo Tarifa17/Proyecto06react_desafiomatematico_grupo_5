@@ -40,7 +40,7 @@ function SumaResta() {
         setIntento(prevIntento => prevIntento + 1);
     };
 
-    if (intentos === 5){
+    if (intento === 5){
         return <Puntuacion puntos={puntos}/>
     }
 
@@ -67,7 +67,7 @@ function SumaResta() {
                     <Card.Text>
                         <h6>{mensaje}</h6>
                         <h6>Puntaje: {puntaje}</h6>
-                        <h6>Intento: {intento +1}</h6>
+                        <h6>Intento: {intento}</h6>
                     </Card.Text>
                 </Card.Body>
             </Card>
