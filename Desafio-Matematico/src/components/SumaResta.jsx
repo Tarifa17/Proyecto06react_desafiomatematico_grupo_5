@@ -24,13 +24,16 @@ function SumaResta() {
     const [puntaje, setPuntaje] = useState(0);
     const [mensaje, setMensaje] = useState('');
     const [intento, setIntento] = useState(1);
+    const [verificado, setVerificado] = useState(false);
 
     const verificarRespuesta = () => {
-        if (parseInt(respuesta) === operacion.resultado) {
+        if ( !verificado && parseInt(respuesta) === operacion.resultado) {
             setPuntaje(puntaje + 1);
             setMensaje('¡Correcto!');
+            setVerificado(true);
         } else {
             setMensaje('Incorrecto. Intenta nuevamente.');
+            setVerificado(true);
         }
     };
 
@@ -39,9 +42,10 @@ function SumaResta() {
         setOperacion(generarOperacion());
         setMensaje('');
         setIntento(prevIntento => prevIntento + 1);
+        setVerificado(false);
     };
 
-    if (intento === 5){
+    if (intento === 6){
         return <Puntuacion puntos={puntaje}/>
     }
 
@@ -63,7 +67,7 @@ function SumaResta() {
                         onChange={(e) => setRespuesta(e.target.value)} 
                         placeholder="Ingresa tu respuesta" 
                     />
-                    <Button variant="primary" onClick={verificarRespuesta}>Verificar Resultado</Button>
+                    <Button variant="primary" onClick={verificarRespuesta} disabled={verificado}>Verificar Resultado</Button>
                     <Button variant="primary" onClick={siguienteDesafio}>Siguiente Desafío</Button>
                     <Card.Text>
                         <h6>{mensaje}</h6>
