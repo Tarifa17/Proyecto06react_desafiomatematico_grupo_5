@@ -1,12 +1,16 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: rgb(57, 66, 66);
-  border: 2px solid gray;
+  background-color: rgb(80, 92, 92);
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 15px;
   padding: 2rem;
   text-align: center;
 }
-
+.Imagen {
+  border: 2px solid rgb(75, 75, 75); 
+  border-radius: 10px; 
+}
 .card {
   padding: 2em;
 }
